@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "homepage": "https://github.com/joethe/addingAngularLab",
   "authors": [
-    "thele116 <thele116@morris.umn.edu>"
+    "smil1201 <mill5978@morris.umn.edu>",
+    "J-Ziegler <ziegl210@morris.umn.edu"
   ],
   "description": "Playing with angular, express, and node.js",
   "main": "app.js",

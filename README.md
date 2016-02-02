@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/smil1201/3601-S16-lab3_angular.svg?branch=master)](https://travis-ci.org/smil1201/3601-S16-lab3_angular)
+
 # CSCI 3601 Lab #3 - Angular
 In this lab you will learn to use AngularJS to simplify the addition of interactive elements such as forms, navbars, footers, and buttons to your projects. In addition, Angular makes it easier to reuse elements like navbars and footers across multiple pages in a website.
 
