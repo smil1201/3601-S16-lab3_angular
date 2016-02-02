@@ -60,7 +60,7 @@ The root directory app.js controls the server while the public/javascript/app.js
 
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
 
-The functions used are addData() and removeData().
+The functions used are addData() and removeData().  
 The Angular directives that allow those functions to... function are ng-submit (add a value), ng-model (for getting the value), and ng-click (delete a value.)
 
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar?
@@ -69,7 +69,7 @@ It's a fragment of HTML that gets inserted into the web page to provide a navBar
 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted.
 
-The trash glyphicon in the Index Page Form for removing items.
+The trash glyphicon in the Index Page Form for removing items.  
 The Submit button on the Index Page uses "btn btn-primary"
 
 
