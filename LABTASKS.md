@@ -35,9 +35,12 @@ views: Contains HTML pages (or fragments of them) to be displayed.
 
 ##### What are the names of the Angular controllers in this web application? What does each of them do?
 
+The names of the angular controllers for this are mainCtr and navbarCtr. MainCtr is responsible for managing the pet form (adding items, removing items, list length).
+NavCtr is responsible for maniaging the navBar (sending users to the various HTML files).
 
 ##### Open the index.html view. What controller(s) is it using?
 
+mainCtrl for the body. I guess it's using navCtrl through the fact that the navbar is included, but it isn't directly referenced in the index.html file. Pick which answer you want.
 
 ##### Where is the navigation bar included in the source code for index.html?
 
