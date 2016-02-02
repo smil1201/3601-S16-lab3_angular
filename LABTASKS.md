@@ -35,7 +35,10 @@ The folders in public are as follows:
 
 ##### What are the names of the Angular controllers in this web application? What does each of them do?
 
-The names of the angular controllers for this are mainCtr and navbarCtr. MainCtr is responsible for managing the pet form (adding items, removing items, list length).
+The names of the angular controllers for this are mainCtr and navbarCtr.
+
+MainCtr is responsible for managing the pet form (adding items, removing items, list length).  
+
 NavCtr is responsible for maniaging the navBar (sending users to the various HTML files).
 
 ##### Open the index.html view. What controller(s) is it using?
