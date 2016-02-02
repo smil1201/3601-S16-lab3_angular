@@ -44,29 +44,39 @@ mainCtrl for the body. I guess it's using navCtrl through the fact that the navb
 
 ##### Where is the navigation bar included in the source code for index.html?
 
+The first div tag at the top of the body.
 
 ##### app.js within public/javascript is where your Angular modules are located at. What modules does the project currently have?
 
+It currently has the modules MainApp and stdControllers.
 
 ##### Notice, the code controlling the Node.js server is in a file also called app.js. There is no particular reason for this other than a generator we will use later on follows the same convention. Explain the difference between the purpose of the files (think client vs server).
 
+The root directory app.js controls the server while the public/javascript/app.js controls the client-side Angular.
 
 ##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart).
 
 
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
 
+The functions used are addData() and removeData().
+The Angular directives that allow those functions to... function are ng-submit (add a value), ng-model (for getting the value), and ng-click (delete a value.)
 
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar?
 
+It's a fragment of HTML that gets inserted into the web page to provide a navBar. To add links, you would add an Object to the navbar.pages[] array in the navbar controller
 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted.
 
+The trash glyphicon in the Index Page Form for removing items.
+The Submit button on the Index Page uses "btn btn-primary"
 
 
 >Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. http://getbootstrap.com/components/ <- Regular Bootstrap. https://angular-ui.github.io/bootstrap/ <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
 
 ##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located?
+
+The tests are located in the root/public/javascript/*.spec.js files. Grunt runs Karma tests.
 
 ## Part #2: modifying the project.
 

@@ -11,7 +11,8 @@
             {text: "kittens"},
             {text: "snake"},
             {text: "badger"},
-            {text: "puppies"}
+            {text: "puppies"},
+            {text: "wombat"}
         ];
 
         mainControl.addData = function(){
