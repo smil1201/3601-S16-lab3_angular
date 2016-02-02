@@ -1,37 +1,37 @@
 #Lab Tasks
 
 After you have cloned the project and set it up as specified in the Readme, complete the following tasks, answering any
-questions by editing this file. 
+questions by editing this file.
 
 ## Part #1: exploring the project.
 
-- Try adding new pets on the index page through the form. Try deleting entries. Observe the results. 
+- Try adding new pets on the index page through the form. Try deleting entries. Observe the results.
 
 > Protip: You'll need to start up the server before you can play with the website.
 
-- Click links on the navigation bar. See what happens. Note that when you move away from the page with pets, your changes to the list of pets are lost. This is because we are not storing the array in a database (this will be a part of the next lab). 
-- Observe the HTML element's formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is. 
+- Click links on the navigation bar. See what happens. Note that when you move away from the page with pets, your changes to the list of pets are lost. This is because we are not storing the array in a database (this will be a part of the next lab).
+- Observe the HTML element's formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is.
 
 ##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more.
 
 All of the files at the top level of the projects are as follows:
-.gitignore: A list of files and directories that git will ignore, and not include when committing/pushing your project.
-.travis.yml: Provides configuration for TravisCI
-app.js: NodeJS/Express configuration for running the NodeJS server and handling requests/responses.
-bower.json: Information about the things that bower is managing. Specifics about the project (versions, dependencies etc.)
-Gruntfile.js: handles various tasks involved in managing the project like running karma tests or initializing servers.
-karma.conf.js: A config file detailing specifics about how tests are being run and files that need to be included.
-Labtasks.md: Lab description and the file in which to edit in short answer questions.
-package.json: Similar to bower.json, provides details about versions involved in the npm installation and various other details about project dependencies.
-Readme.md: basic lab info for setup.
+- .gitignore: A list of files and directories that git will ignore, and not include when committing/pushing your project.
+- .travis.yml: Provides configuration for TravisCI
+- app.js: NodeJS/Express configuration for running the NodeJS server and handling requests/responses.
+- bower.json: Information about the things that bower is managing. Specifics about the project (versions, dependencies etc.)
+- Gruntfile.js: handles various tasks involved in managing the project like running karma tests or initializing servers.
+- karma.conf.js: A config file detailing specifics about how tests are being run and files that need to be included.
+- Labtasks.md: Lab description and the file in which to edit in short answer questions.
+- package.json: Similar to bower.json, provides details about versions involved in the npm installation and various other details about project dependencies.
+- Readme.md: basic lab info for setup.
 
 ##### List the folders in the public folder and describe the purpose for each.
 
 The folders in public are as follows:
-assets: contains files for use in the project (like images in this case).
-.css: Contains code used in styling the HTML elements.
-javascript: Location of client side JavaScript and Angular Controllers.
-views: Contains HTML pages (or fragments of them) to be displayed.
+- assets: contains files for use in the project (like images in this case).
+- .css: Contains code used in styling the HTML elements.
+- javascript: Location of client side JavaScript and Angular Controllers.
+- views: Contains HTML pages (or fragments of them) to be displayed.
 
 ##### What are the names of the Angular controllers in this web application? What does each of them do?
 
@@ -84,8 +84,8 @@ The tests are located in the root/public/javascript/*.spec.js files. Grunt runs 
   - This should have been done as part of the setup.
   - (Did this. Go us, we're awesome)
 
-- Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image. 
-- Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look "nice", just different from what it currently is. 
+- Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image.
+- Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look "nice", just different from what it currently is.
 
 ## Part #3: components, controllers, and modules, oh my!
 
@@ -112,13 +112,11 @@ The tests are located in the root/public/javascript/*.spec.js files. Grunt runs 
 
 
 ## Part #4: adding the GPA calculator, redux.
-- Your goal is to add a page with a form that allows a student to add their courses (course name, number of credits, and letter grade) and displays their GPA. The GPA changes as courses are added or removed. As before, letter grades are A, B, C, D, and F only. 
-- The controller for the GPA needs to be added to main.controller.js. Think of what needs to be in its scope. 
-- Add the necessary view, include the navbar into it, and then add the GPA calculator. Add one feature at a time, make sure everything is working as it should. 
-- As before, use TDD for all the helper functions (you may reuse the tests from the previous lab). Now they will all be located in public (client-side). No need to modify karma files since it's already testing client-side javascript. 
-- Use different color for displaying the GPA, depending on whether it is below 2.0, between 2.0 and 3.0, and 3.0 and above. Use your own CSS or bootstrap. 
-- Perform simple data validation (add the corresponding function to the controller) so that invalid entries (invalid grades or wrong number of credits) are not added to the model. An error message needs to be displayed to the user). 
+- Your goal is to add a page with a form that allows a student to add their courses (course name, number of credits, and letter grade) and displays their GPA. The GPA changes as courses are added or removed. As before, letter grades are A, B, C, D, and F only.
+- The controller for the GPA needs to be added to main.controller.js. Think of what needs to be in its scope.
+- Add the necessary view, include the navbar into it, and then add the GPA calculator. Add one feature at a time, make sure everything is working as it should.
+- As before, use TDD for all the helper functions (you may reuse the tests from the previous lab). Now they will all be located in public (client-side). No need to modify karma files since it's already testing client-side javascript.
+- Use different color for displaying the GPA, depending on whether it is below 2.0, between 2.0 and 3.0, and 3.0 and above. Use your own CSS or bootstrap.
+- Perform simple data validation (add the corresponding function to the controller) so that invalid entries (invalid grades or wrong number of credits) are not added to the model. An error message needs to be displayed to the user).
 
 ##### When you're done with the lab, take a look at your test coverage report and make a note here about what pieces of code are covered well, what isn't, and why this is the case.
-
-
