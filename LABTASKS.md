@@ -12,17 +12,54 @@ questions by editing this file.
 - Click links on the navigation bar. See what happens. Note that when you move away from the page with pets, your changes to the list of pets are lost. This is because we are not storing the array in a database (this will be a part of the next lab). 
 - Observe the HTML element's formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is. 
 
-##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more. 
+##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more.
+
+All of the files at the top level of the projects are as follows:
+.gitignore: A list of files and directories that git will ignore, and not include when committing/pushing your project.
+.travis.yml: Provides configuration for TravisCI
+app.js: NodeJS/Express configuration for running the NodeJS server and handling requests/responses.
+bower.json: Information about the things that bower is managing. Specifics about the project (versions, dependencies etc.)
+Gruntfile.js: handles various tasks involved in managing the project like running karma tests or initializing servers.
+karma.conf.js: A config file detailing specifics about how tests are being run and files that need to be included.
+Labtasks.md: Lab description and the file in which to edit in short answer questions.
+package.json: Similar to bower.json, provides details about versions involved in the npm installation and various other details about project dependencies.
+Readme.md: basic lab info for setup.
+
 ##### List the folders in the public folder and describe the purpose for each.
+
+The folders in public are as follows:
+assets: contains files for use in the project (like images in this case).
+.css: Contains code used in styling the HTML elements.
+javascript: Location of client side JavaScript and Angular Controllers.
+views: Contains HTML pages (or fragments of them) to be displayed.
+
 ##### What are the names of the Angular controllers in this web application? What does each of them do?
-##### Open the index.html view. What controller(s) is it using? 
-##### Where is the navigation bar included in the source code for index.html? 
+
+
+##### Open the index.html view. What controller(s) is it using?
+
+
+##### Where is the navigation bar included in the source code for index.html?
+
+
 ##### app.js within public/javascript is where your Angular modules are located at. What modules does the project currently have?
+
+
 ##### Notice, the code controlling the Node.js server is in a file also called app.js. There is no particular reason for this other than a generator we will use later on follows the same convention. Explain the difference between the purpose of the files (think client vs server).
-##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart). 
+
+
+##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart).
+
+
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
-##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
-##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
+
+
+##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar?
+
+
+##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted.
+
+
 
 >Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. http://getbootstrap.com/components/ <- Regular Bootstrap. https://angular-ui.github.io/bootstrap/ <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
 
