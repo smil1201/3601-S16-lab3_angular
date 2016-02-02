@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kittens</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+
+    <!-- Loading Javascript Stuff -->
+    <script type="text/javascript" src="javascript/clientJavascript.js"></script>
+    <script type="text/javascript" src="angularjs/angular.js"></script>
+
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/navbar.controller.js"></script>
+</head>
+
+<body ng-app="mainApp">
+<div ng-include="'views/navbar.html'"></div>
+<hr>
+<h1>This is a kitten page! <span class="label label-danger">Cats4Lyfe</span></h1>
+
+<div class="kittens">
+    <img class="blockCenter" src="assets/images/kitten.png">
+</div>
+
+</body>
+</html>
