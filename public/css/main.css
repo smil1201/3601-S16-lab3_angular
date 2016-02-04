@@ -26,3 +26,7 @@ img {
     float: right;
     padding: 10px;
 }
+
+.list-group-item {
+    padding:5px;
+}

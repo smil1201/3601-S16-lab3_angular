@@ -13,7 +13,7 @@
         ];
 
         mainControl.addData = function(){
-            if(mainControl.courseField.length >= 1) {
+            if(true) { // mainControl.courseField.length >= 1
                 mainControl.data.push({course: mainControl.courseField, grade: mainControl.gradeField, credits: mainControl.creditsField});
                 mainControl.courseField = "";
                 mainControl.gradeField = "";
