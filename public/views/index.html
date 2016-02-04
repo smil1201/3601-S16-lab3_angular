@@ -25,23 +25,24 @@
     <div ng-include="'views/navbar.html'"></div>
 
     <hr>
-    <img src="assets/images/puppies.jpg">
-    <button class="blockCenter" style="margin-top: 10px" type="button" onclick="sendAlert()">Send an alert!</button>
-    <hr>
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">
 
                 <form ng-submit="mainControl.addData()">
-                    <input ng-model="mainControl.textField" type="text" size="50" placeholder="add a new item to the list!">
+                    <input ng-model="mainControl.courseField" type="text" size="25" placeholder="Enter your course name">
+                    <input ng-model="mainControl.gradeField" type="text" size="25" placeholder="Enter your letter grade">
+                    <input ng-model="mainControl.creditsField" type="text" size="25" placeholder="Enter the number of credits">
                     <input type="submit" value="submit" class="btn btn-primary">
-                    <span class="floatRight">Items in this list: {{mainControl.itemsInList()}}</span>
+                    <span class="floatRight">Courses in this list: {{mainControl.itemsInList()}}</span>
                 </form>
 
             </li>
-            <li class="list-group-item" ng-repeat="test in mainControl.data">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData($index)"></span></li>
+            <li class="list-group-item" ng-repeat="class in mainControl.data">{{class.credits}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData($index)"></span></li>
         </ul>
     </div>
+
+    <hr>
 
     <div ng-include="'views/footer.html'"></div>
 

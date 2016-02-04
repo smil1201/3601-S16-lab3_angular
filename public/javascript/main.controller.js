@@ -3,22 +3,21 @@
         var mainControl = this;
         console.log("Main controller loaded!");
 
-        mainControl.textField = "";
+        mainControl.courseField = "";
+        mainControl.gradeField = "";
+        mainControl.creditsField = "";
 
         // Normally, data like this would be stored in a database, and this controller would issue an http:get request for it.
         mainControl.data = [
-            {text: "fish"},
-            {text: "kittens"},
-            {text: "snake"},
-            {text: "badger"},
-            {text: "puppies"},
-            {text: "wombat"}
+
         ];
 
         mainControl.addData = function(){
-            if(mainControl.textField.length >= 1) {
-                mainControl.data.push({text: mainControl.textField});
-                mainControl.textField = "";
+            if(mainControl.courseField.length >= 1) {
+                mainControl.data.push({course: mainControl.courseField, grade: mainControl.gradeField, credits: mainControl.creditsField});
+                mainControl.courseField = "";
+                mainControl.gradeField = "";
+                mainControl.creditsField = "";
             }
         };
 
