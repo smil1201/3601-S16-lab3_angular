@@ -1,0 +1,6 @@
+<footer id="footer" ng-controller="footerCtrl as fCtrl">
+    <p>Kittens brought to you by the coolest kids in school.</p>
+    <ul class="nav nav-pills">
+        <li role="presentation" ng-repeat="item in fCtrl.pages track by $index"><a href="{{item.link}}">{{item.text}}</a></li>
+    </ul>
+</footer>
