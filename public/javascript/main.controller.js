@@ -12,12 +12,17 @@
 
         ];
 
-        mainControl.addData = function(){
-
-                mainControl.data.push({course: mainControl.courseField, grade: mainControl.gradeField, credits: mainControl.creditsField});
+        mainControl.addData = function() {
+            if (mainControl.letToNum(mainControl.gradeField) != -1 && !isNaN(parseInt(mainControl.creditsField))) {
+                mainControl.data.push({
+                    course: mainControl.courseField,
+                    grade: mainControl.gradeField,
+                    credits: mainControl.creditsField
+                });
                 mainControl.courseField = "";
                 mainControl.gradeField = "";
                 mainControl.creditsField = "";
+            }
         };
 
         mainControl.removeData = function(index){
