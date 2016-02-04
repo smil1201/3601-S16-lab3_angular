@@ -21,13 +21,11 @@ describe('Testing controller: mainCtrl', function(){
     });
 
     describe("testing data functionality: ", function(){
-        it("should contain some data by default", function(){
-            expect(scope.mainControl.data.length > 0).toEqual(true);
-        });
 
         it("should be able to remove an item from the list", function(){
+            scope.mainControl.data.push({course: "test", grade: "A", credits: "1"});
            var initialLength = scope.mainControl.data.length;
-           scope.mainControl.removeData(1);
+           scope.mainControl.removeData(0);
            expect(scope.mainControl.data.length < initialLength).toEqual(true);
         });
 

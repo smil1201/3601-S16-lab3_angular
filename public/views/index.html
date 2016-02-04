@@ -40,6 +40,8 @@
             </li>
             <li class="list-group-item" ng-repeat="class in mainControl.data">Course: {{class.course}} Grade: {{class.grade}} Credits: {{class.credits}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData($index)"></span></li>
         </ul>
+
+        <h1>Your GPA is: {{mainControl.getGPA()}} </h1>
     </div>
 
     <hr>
