@@ -29,10 +29,6 @@
             mainControl.data.splice(index, 1);
         };
 
-        mainControl.cat = function(str1, str2){
-            return str1 + str2;
-        };
-
         mainControl.itemsInList = function(){
             return mainControl.data.length;
         };
