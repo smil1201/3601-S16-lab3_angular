@@ -20,15 +20,15 @@ describe('Testing controller: mainCtrl', function(){
         expect(true).toEqual(true);
     });
 
-    describe("testing data functionality: ", function(){
+    describe("Testing Main Controller functionality: ", function(){
 
         it("should be able to remove an item from the list", function(){
             scope.mainControl.data.push({course: "test", grade: "A", credits: "1"});
-           var initialLength = scope.mainControl.data.length;
-           scope.mainControl.removeData(0);
-           expect(scope.mainControl.data.length < initialLength).toEqual(true);
+            var initialLength = scope.mainControl.data.length;
+            scope.mainControl.removeData(0);
+            expect(scope.mainControl.data.length < initialLength).toEqual(true);
         });
-
+        
         it("should be able to add an item to the list", function(){
             var initialLength = scope.mainControl.data.length;
             scope.mainControl.gradeField = "A";
@@ -77,6 +77,6 @@ describe('Testing controller: navbarCtrl', function(){
     });
 
     it('should contain pages', function(){
-      expect(scope.navbar.pages.length > 0).toEqual(true);
+        expect(scope.navbar.pages.length > 0).toEqual(true);
     });
 });
