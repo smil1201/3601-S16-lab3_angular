@@ -28,13 +28,23 @@ describe('Testing controller: mainCtrl', function(){
             scope.mainControl.removeData(0);
             expect(scope.mainControl.data.length < initialLength).toEqual(true);
         });
-        
+
         it("should be able to add an item to the list", function(){
             var initialLength = scope.mainControl.data.length;
             scope.mainControl.gradeField = "A";
             scope.mainControl.creditsField = "1"
             scope.mainControl.addData();
             expect(scope.mainControl.data.length > initialLength).toEqual(true);
+        });
+
+        it("Should be able to get the length of the list", function(){
+            var initialLength = scope.mainControl.itemsInList();
+            expect(initialLength).toBe(0);
+            scope.mainControl.data.push({course: "test", grade: "A", credits: "1"});
+            expect(scope.mainControl.itemsInList()).not.toBe(initialLength);
+            expect(scope.mainControl.itemsInList()).toBe(1);
+            scope.mainControl.removeData(0);
+            expect(scope.mainControl.itemsInList()).toBe(0);
         });
 
         it('Testing letter to number conversions', function(){
