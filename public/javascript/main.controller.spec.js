@@ -145,3 +145,27 @@ describe('Testing controller: navbarCtrl', function(){
         expect(scope.navbar.pages.length > 0).toEqual(true);
     });
 });
+
+describe('Testing controller: footerCtrl', function(){
+
+    // load the controller's module
+    beforeEach(module('mainApp'));
+
+    var mainCtrl, scope;
+
+    // Initialize the controller and mock scope.
+    beforeEach(inject(function($controller, $rootScope) {
+        scope = $rootScope.$new();
+        mainCtrl = $controller('footerCtrl as footer', {
+            $scope: scope
+        });
+    }));
+
+    it('dummy test should pass', function(){
+        expect(true).toEqual(true);
+    });
+
+    it('should contain pages', function(){
+        expect(scope.footer.pages.length > 0).toEqual(true);
+    });
+});
