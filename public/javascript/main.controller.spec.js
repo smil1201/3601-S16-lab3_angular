@@ -47,7 +47,7 @@ describe('Testing controller: mainCtrl', function(){
             expect(scope.mainControl.itemsInList()).toBe(0);
         });
 
-        it('Testing letter to number conversions', function(){
+        it("Testing letter to number conversions", function(){
             expect(scope.mainControl.letToNum("A")).toBe(4.00);
             expect(scope.mainControl.letToNum("A-")).toBe(3.66);
             expect(scope.mainControl.letToNum("B+")).toBe(3.33);
@@ -62,6 +62,61 @@ describe('Testing controller: mainCtrl', function(){
             expect(scope.mainControl.letToNum("F")).toBe(0);
             expect(scope.mainControl.letToNum("sdf")).toBe(-1); // Can't be bothered to write a custom error, and this will work fine with the GPA Calculator function anywhow.
         });
+
+        it("Should be able to calculate GPA properly", function(){
+            expect(scope.mainControl.getGPA()).toBe("");
+
+            scope.mainControl.data.push({course: "test", grade: "A", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('4.00');
+
+            scope.mainControl.data.push({course: "test", grade: "B", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('3.50');
+
+            scope.mainControl.data.push({course: "test", grade: "C", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('3.00');
+
+            scope.mainControl.data.push({course: "test", grade: "D", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('2.50');
+
+            scope.mainControl.data.push({course: "test", grade: "F", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('2.00');
+
+            scope.mainControl.removeData(0);
+            scope.mainControl.removeData(0);
+            scope.mainControl.removeData(0);
+            scope.mainControl.removeData(0);
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "A-", credits: "1"});
+            expect(scope.mainControl.getGPA()).toBe('3.66');
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "B+", credits: "2"});
+            expect(scope.mainControl.getGPA()).toBe('3.33')
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "B-", credits: "3"});
+            expect(scope.mainControl.getGPA()).toBe('2.66');
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "C+", credits: "4"});
+            expect(scope.mainControl.getGPA()).toBe('2.33')
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "C-", credits: "5"});
+            expect(scope.mainControl.getGPA()).toBe('1.66');
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "D+", credits: "6"});
+            expect(scope.mainControl.getGPA()).toBe('1.33')
+            scope.mainControl.removeData(0);
+
+            scope.mainControl.data.push({course: "test", grade: "D-", credits: "7"});
+            expect(scope.mainControl.getGPA()).toBe('0.66');
+            scope.mainControl.removeData(0);
+
+
+        })
 
     });
 });
