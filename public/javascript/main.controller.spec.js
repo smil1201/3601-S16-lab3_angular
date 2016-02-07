@@ -37,6 +37,38 @@ describe('Testing controller: mainCtrl', function(){
             expect(scope.mainControl.data.length > initialLength).toEqual(true);
         });
 
+        it("should ignore improper cases when adding data", function(){
+            // First, set up proper input data.
+            scope.mainControl.courseField = "Math";
+            scope.mainControl.gradeField = "A";
+            scope.mainControl.creditsField = "1";
+
+            expect(scope.mainControl.data.length).toBe(0);
+            scope.mainControl.addData();
+            expect(scope.mainControl.data.length).toBe(1);
+
+            // Test without course field. Should add anyhow.
+            scope.mainControl.courseField = "";
+            scope.mainControl.gradeField = "A";
+            scope.mainControl.creditsField = "1";
+            scope.mainControl.addData();
+            expect(scope.mainControl.data.length).toBe(2);
+
+            // Test without grade field. Should not add anything.
+            scope.mainControl.courseField = "Class";
+            scope.mainControl.gradeField = "";
+            scope.mainControl.creditsField = "1";
+            scope.mainControl.addData();
+            expect(scope.mainControl.data.length).toBe(2);
+
+            // Test without credits field. Should not add anything.
+            scope.mainControl.courseField = "Course";
+            scope.mainControl.gradeField = "A";
+            scope.mainControl.creditsField = "";
+            scope.mainControl.addData();
+            expect(scope.mainControl.data.length).toBe(2);
+        });
+
         it("Should be able to get the length of the list", function(){
             var initialLength = scope.mainControl.itemsInList();
             expect(initialLength).toBe(0);
@@ -66,6 +98,7 @@ describe('Testing controller: mainCtrl', function(){
         it("Should be able to calculate GPA properly", function(){
             expect(scope.mainControl.getGPA()).toBe("");
 
+            // Test letter grades for proper functionality.
             scope.mainControl.data.push({course: "test", grade: "A", credits: "1"});
             expect(scope.mainControl.getGPA()).toBe('4.00');
 
@@ -81,12 +114,12 @@ describe('Testing controller: mainCtrl', function(){
             scope.mainControl.data.push({course: "test", grade: "F", credits: "1"});
             expect(scope.mainControl.getGPA()).toBe('2.00');
 
-            scope.mainControl.removeData(0);
-            scope.mainControl.removeData(0);
-            scope.mainControl.removeData(0);
-            scope.mainControl.removeData(0);
-            scope.mainControl.removeData(0);
 
+            // Reset data. Removes all the courses.
+            scope.mainControl.data = [];
+
+
+            // Testing on +/- grades, and number of credits.
             scope.mainControl.data.push({course: "test", grade: "A-", credits: "1"});
             expect(scope.mainControl.getGPA()).toBe('3.66');
             scope.mainControl.removeData(0);
