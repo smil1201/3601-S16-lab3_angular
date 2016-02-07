@@ -120,4 +120,5 @@ The tests are located in the root/public/javascript/*.spec.js files. Grunt runs 
 - Use different color for displaying the GPA, depending on whether it is below 2.0, between 2.0 and 3.0, and 3.0 and above. Use your own CSS or bootstrap.
 - Perform simple data validation (add the corresponding function to the controller) so that invalid entries (invalid grades or wrong number of credits) are not added to the model. An error message needs to be displayed to the user).
 
-##### When you're done with the lab, take a look at your test coverage report and make a note here about what pieces of code are covered well, what isn't, and why this is the case.
+##### When you're done with the lab, take a look at your test coverage report and make a note here about what pieces of code are covered well, what isn't, and why this is the case.  
+We have 100% test coverage across the board. It was much lower, but using the coverage summary the tests were improved to achieve 100% where previously it was lower. Things that originally weren't covered well was the GPA calculator stuff and the footer controller. The former since we copied a good amount of code from Lab 2, and the footer controller because it is a tiny file and contains very little code. When there isn't much code, there isn't necessarily anything that can be tested in a meaningful way.
