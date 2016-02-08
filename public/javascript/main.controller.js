@@ -22,6 +22,12 @@
                 mainControl.courseField = "";
                 mainControl.gradeField = "";
                 mainControl.creditsField = "";
+            } else {
+                if(mainControl.letToNum(mainControl.gradeField) == -1) {
+                    alert("Please enter a valid letter grade.")
+                } else {
+                    alert("Please enter a number for credits")
+                }
             }
         };
 
